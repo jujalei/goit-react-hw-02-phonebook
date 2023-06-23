@@ -3,6 +3,7 @@ export const ContactList = ({ contacts, onDelete }) => {
     <div>
       {contacts.length > 0 && (
         <div>
+          <h2>Contacts</h2>
           <ul>
             {contacts.map(contact => {
               return (
