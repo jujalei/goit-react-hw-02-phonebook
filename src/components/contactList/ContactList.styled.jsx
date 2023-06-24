@@ -1,4 +1,6 @@
 import styled from '@emotion/styled';
+import trashIcon from './icons/trash.svg';
+import phoneIcon from './icons/phone.svg';
 
 const SubTitle = styled.h2`
   font-family: 'Dancing Script', cursive;
@@ -23,6 +25,22 @@ const ListItem = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: relative;
+  padding-left: 30px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url(${phoneIcon});
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 `;
 
 const DeleteBtn = styled.button`
@@ -30,7 +48,12 @@ const DeleteBtn = styled.button`
   border: none;
   border-radius: 20px;
   background-color: #fcab79;
+  background-image: url(${trashIcon});
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   height: 30px;
+  width: 30px;
   transition: border 250ms linear;
 
   &:hover {

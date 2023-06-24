@@ -23,9 +23,7 @@ export const ContactList = ({ contacts, onDelete }) => {
                     onClick={() => {
                       onDelete(contact.id);
                     }}
-                  >
-                    Delete
-                  </DeleteBtn>
+                  ></DeleteBtn>
                 </ListItem>
               );
             })}
