@@ -1,3 +1,5 @@
+import { Filter } from '../filter/Filter';
+
 import {
   SubTitle,
   ContactsList,
@@ -5,12 +7,13 @@ import {
   DeleteBtn,
 } from './ContactList.styled';
 
-export const ContactList = ({ contacts, onDelete }) => {
+export const ContactList = ({ contacts, onDelete, searchName, onSearch }) => {
   return (
     <div>
       {contacts.length > 0 && (
         <div>
           <SubTitle>Contacts</SubTitle>
+          <Filter searchName={searchName} onSearch={onSearch} />
           <ContactsList>
             {contacts.map(contact => {
               return (

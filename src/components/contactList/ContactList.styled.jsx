@@ -27,7 +27,7 @@ const ListItem = styled.li`
   align-items: center;
 
   position: relative;
-  padding-left: 30px;
+  padding-left: 20px;
 
   &::before {
     content: '';
