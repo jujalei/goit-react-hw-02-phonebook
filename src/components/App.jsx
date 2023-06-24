@@ -63,6 +63,6 @@ export class App extends Component {
 }
 
 App.propTypes = {
-  contacts: PropTypes.array.isRequired,
-  filter: PropTypes.string.isRequired,
+  contacts: PropTypes.array,
+  filter: PropTypes.string,
 };
