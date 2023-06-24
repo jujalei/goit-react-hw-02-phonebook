@@ -41,6 +41,11 @@ export class App extends Component {
     const filterContact = contacts.filter(({ name }) =>
       name.toLowerCase().includes(normalizeFilter)
     );
+
+    if (filterContact.length === 0) {
+      return contacts;
+    }
+
     return filterContact;
   };
 

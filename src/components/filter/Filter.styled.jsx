@@ -20,22 +20,20 @@ const FilterInput = styled.input`
 `;
 
 const InputWrapper = styled.div`
-  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: end;
 `;
 
 const FilterClearBtn = styled.button`
-  position: absolute;
-  right: 3px;
-  top: 26px;
-
   cursor: pointer;
   font-size: 16px;
 
   border: none;
   border-radius: 20px;
   background-color: #fcab79;
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 35px;
   transition: border 250ms linear;
 
   &:hover {
