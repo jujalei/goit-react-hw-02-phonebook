@@ -1,15 +1,17 @@
+import { FilterWrap, FilterInput } from './Filter.styled';
+
 export const Filter = ({ searchName, onSearch }) => {
   return (
-    <div>
+    <FilterWrap>
       <label>
         Find contacts by name
-        <input
+        <FilterInput
           name="text"
           type="text"
           value={searchName}
           onChange={onSearch}
-        ></input>
+        />
       </label>
-    </div>
+    </FilterWrap>
   );
 };

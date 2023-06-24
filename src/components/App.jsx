@@ -5,6 +5,8 @@ import { ContactForm } from './contactForm/ContactForm';
 import { ContactList } from './contactList/ContactList';
 import { Filter } from './filter/Filter';
 
+import { Wrapper, MainTitle } from './App.styled';
+
 export class App extends Component {
   state = {
     contacts: [],
@@ -47,15 +49,15 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Phone book</h1>
+      <Wrapper>
+        <MainTitle>Phone book</MainTitle>
         <ContactForm onForm={this.handleSubmit} />
         <Filter searchName={this.state.filter} onSearch={this.handleSearch} />
         <ContactList
           contacts={this.getContact()}
           onDelete={this.deleteContact}
         />
-      </div>
+      </Wrapper>
     );
   }
 }
