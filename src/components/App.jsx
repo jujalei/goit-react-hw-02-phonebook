@@ -14,7 +14,7 @@ export class App extends Component {
 
   handleSubmit = data => {
     for (const contact of this.state.contacts) {
-      if (data.name.includes(contact.name)) {
+      if (data.name.toLowerCase() === contact.name.toLowerCase()) {
         alert(`${contact.name} "is already in contacts"`);
         return;
       }
