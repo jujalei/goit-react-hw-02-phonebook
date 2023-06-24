@@ -7,13 +7,23 @@ import {
   DeleteBtn,
 } from './ContactList.styled';
 
-export const ContactList = ({ contacts, onDelete, searchName, onSearch }) => {
+export const ContactList = ({
+  contacts,
+  onDelete,
+  searchName,
+  onSearch,
+  clearFilter,
+}) => {
   return (
     <div>
       {contacts.length > 0 && (
         <div>
           <SubTitle>Contacts</SubTitle>
-          <Filter searchName={searchName} onSearch={onSearch} />
+          <Filter
+            searchName={searchName}
+            onSearch={onSearch}
+            clearFilter={clearFilter}
+          />
           <ContactsList>
             {contacts.map(contact => {
               return (

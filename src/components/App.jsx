@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import { ContactForm } from './contactForm/ContactForm';
 import { ContactList } from './contactList/ContactList';
-// import { Filter } from './filter/Filter';
 
 import { Wrapper, MainTitle } from './App.styled';
 
@@ -32,6 +31,10 @@ export class App extends Component {
     });
   };
 
+  handleFilterClear = () => {
+    this.setState({ filter: '' });
+  };
+
   getContact = () => {
     const { filter, contacts } = this.state;
     const normalizeFilter = filter.toLowerCase();
@@ -52,12 +55,12 @@ export class App extends Component {
       <Wrapper>
         <MainTitle>Phone book</MainTitle>
         <ContactForm onForm={this.handleSubmit} />
-        {/* <Filter searchName={this.state.filter} onSearch={this.handleSearch} /> */}
         <ContactList
           contacts={this.getContact()}
           onDelete={this.deleteContact}
           searchName={this.state.filter}
           onSearch={this.handleSearch}
+          clearFilter={this.handleFilterClear}
         />
       </Wrapper>
     );

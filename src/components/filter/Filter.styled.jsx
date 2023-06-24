@@ -19,4 +19,28 @@ const FilterInput = styled.input`
   padding-left: 10px;
 `;
 
-export { FilterWrap, FilterInput };
+const InputWrapper = styled.div`
+  position: relative;
+`;
+
+const FilterClearBtn = styled.button`
+  position: absolute;
+  right: 3px;
+  top: 26px;
+
+  cursor: pointer;
+  font-size: 16px;
+
+  border: none;
+  border-radius: 20px;
+  background-color: #fcab79;
+  height: 25px;
+  width: 25px;
+  transition: border 250ms linear;
+
+  &:hover {
+    border: 1px dashed;
+  }
+`;
+
+export { FilterWrap, FilterInput, InputWrapper, FilterClearBtn };
